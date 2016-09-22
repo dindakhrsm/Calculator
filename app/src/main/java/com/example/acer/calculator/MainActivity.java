@@ -352,12 +352,12 @@ import java.util.Arrays;
                     mDivision=false;
                 }
 
-               /* if (mPowerofTwo == true) {
+               if (mPowerofTwo == true) {
                     editText2.setText (Math.pow(mValueTwo,2.0)+"");
                     mPowerofTwo=false;
                 }
 
-                if (mSquareRoot == true) {
+              /*  if (mSquareRoot == true) {
                     editText2.setText (Math.sqrt(mValueTwo,2.0)+"");
                     mSquareRoot=false;
             }*/

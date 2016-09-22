@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="squareroot">\u221a</string>
+    <string name="delete">\u2190</string>
+    <string name="mult">\u2715</string>
+    <string name="open">\u2768</string>
+    <string name="close">\u2769</string>
+    <string name ='percent'>\uff05</string>
+    <string name ='divide'>\u00f7</string>
+</resources>

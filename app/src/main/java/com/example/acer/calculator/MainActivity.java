@@ -161,13 +161,13 @@ import java.util.Arrays;
     public class MainActivity extends AppCompatActivity {
     Button button0 , button1 , button2 , button3 , button4 , button5 , button6 ,
             button7 , button8 , button9 , buttonDot, buttonAdd , buttonSub , buttonMult ,
-            buttonDiv, buttonX2, buttonSquareRoot, buttonCC , buttonEqual ;
+            buttonDiv, buttonX2, buttonSquareRoot, buttonPercent, buttonCC , buttonEqual ;
 
     EditText editText2 ;
 
     float mValueOne , mValueTwo ;
 
-    boolean mAddition , mSubtract ,mMultiplication ,mDivision, mPowerofTwo, mSquareRoot ;
+    boolean mAddition , mSubtract ,mMultiplication ,mDivision, mPowerofTwo, mSquareRoot, mPercent ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -191,6 +191,7 @@ import java.util.Arrays;
         buttonDiv = (Button) findViewById(R.id.buttonDiv);
         buttonX2 = (Button) findViewById(R.id.buttonX2);
         buttonSquareRoot = (Button) findViewById(R.id.buttonSquareRoot);
+        buttonPercent = (Button) findViewById(R.id.buttonPercent);
         buttonCC = (Button) findViewById(R.id.buttonCC);
         buttonEqual = (Button) findViewById(R.id.buttonEqual);
         editText2 = (EditText) findViewById(R.id.editText2);
@@ -326,6 +327,15 @@ import java.util.Arrays;
             }
         });
 
+        buttonPercent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne = Float.parseFloat(editText2.getText() + "");
+                mPercent = true;
+                editText2.setText(null);
+            }
+        });
+
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -361,6 +371,10 @@ import java.util.Arrays;
                     editText2.setText (Math.sqrt(mValueTwo,2.0)+"");
                     mSquareRoot=false;
             }*/
+                if (mPercent == true) {
+                    editText2.setText (((mValueOne/100)*mValueTwo)+"");
+                    mPercent=false;
+                }
 
             }
         });
